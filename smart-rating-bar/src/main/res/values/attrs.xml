@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+    <declare-styleable name="SmartRatingBar">
+        <attr name="starCount" format="integer" />
+        <attr name="starSize" format="dimension" />
+        <attr name="starSpacing" format="dimension" />
+        <attr name="starFillColor" format="color" />
+        <attr name="starEmptyColor" format="color" />
+        <attr name="bounceAnimationDuration" format="integer" />
+        <attr name="bounceAnimationEnabled" format="boolean" />
+        <attr name="starFilled" format="reference" /> <!-- drawable for filled star -->
+        <attr name="starEmpty" format="reference" /> <!-- drawable for empty star -->
+        <attr name="enableFlyingAnimation" format="boolean" />
+
+    </declare-styleable>
+</resources>
+
+

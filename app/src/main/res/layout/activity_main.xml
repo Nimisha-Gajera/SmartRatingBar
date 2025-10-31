@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <!-- Top App Bar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface"
+        app:elevation="4dp"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:title="@string/app_name"
+        app:titleTextAppearance="@style/TextAppearance.Material3.HeadlineSmall.Emphasized"
+        app:titleTextColor="@color/onSurface" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:divider="?attr/dividerHorizontal"
+            android:dividerPadding="12dp"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <!-- Each Rating Section Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/surfaceVarient"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/outline"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/star_rating"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+                            android:textColor="@color/onSurface" />
+
+                        <TextView
+                            android:id="@+id/mTxtStarRatingValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="0"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+                            android:textColor="@color/onSurface" />
+                    </LinearLayout>
+
+                    <com.library.smart_rating_bar.SmartRatingBar
+                        android:id="@+id/starRatingBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:bounceAnimationDuration="300"
+                        app:bounceAnimationEnabled="true"
+                        app:enableFlyingAnimation="false"
+                        app:starCount="5"
+                        app:starEmpty="@drawable/ic_unfill_star"
+                        app:starEmptyColor="@color/outline"
+                        app:starFillColor="@color/Primary"
+                        app:starFilled="@drawable/ic_fill_star"
+                        app:starSize="36dp"
+                        app:starSpacing="8dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Heart Rating -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/surfaceVarient"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/outline"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/heart_rating"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+                            android:textColor="@color/onSurface" />
+
+                        <TextView
+                            android:id="@+id/mTxtHeartRatingValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="0"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+                            android:textColor="@color/onSurface" />
+                    </LinearLayout>
+
+                    <com.library.smart_rating_bar.SmartRatingBar
+                        android:id="@+id/heartRatingBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:bounceAnimationDuration="300"
+                        app:bounceAnimationEnabled="true"
+                        app:enableFlyingAnimation="false"
+                        app:starCount="5"
+                        app:starEmpty="@drawable/ic_unfill_heart"
+                        app:starEmptyColor="@color/outline"
+                        app:starFillColor="@color/Primary"
+                        app:starFilled="@drawable/ic_fill_heart"
+                        app:starSize="36dp"
+                        app:starSpacing="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Diamond -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/surfaceVarient"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/outline"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Diamond Rating:"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+                            android:textColor="@color/onSurface" />
+
+                        <TextView
+                            android:id="@+id/mTxtDiamondRatingValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="0"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+                            android:textColor="@color/onSurface" />
+                    </LinearLayout>
+
+                    <com.library.smart_rating_bar.SmartRatingBar
+                        android:id="@+id/diamondRatingBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:bounceAnimationEnabled="true"
+                        app:enableFlyingAnimation="false"
+                        app:starCount="5"
+                        app:starEmpty="@drawable/ic_unfill_diamond"
+                        app:starEmptyColor="@color/outline"
+                        app:starFillColor="@color/Primary"
+                        app:starFilled="@drawable/ic_fill_diamond"
+                        app:starSize="36dp"
+                        app:starSpacing="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Crown -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/surfaceVarient"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/outline"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/crown_rating"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+                            android:textColor="@color/onSurface" />
+
+                        <TextView
+                            android:id="@+id/mTxtCrownRatingValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="0"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium.Emphasized"
+                            android:textColor="@color/onSurface" />
+                    </LinearLayout>
+
+                    <com.library.smart_rating_bar.SmartRatingBar
+                        android:id="@+id/crownRatingBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:bounceAnimationEnabled="true"
+                        app:enableFlyingAnimation="false"
+                        app:starCount="5"
+                        app:starEmpty="@drawable/ic_unfill_crown"
+                        app:starEmptyColor="@color/outline"
+                        app:starFillColor="@color/Primary"
+                        app:starFilled="@drawable/ic_fill_crown"
+                        app:starSize="36dp"
+                        app:starSpacing="8dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Sliders Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/surfaceVarient"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="3dp"
+                app:strokeColor="@color/outline"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Star Spacing"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall.Emphasized"
+                        android:textColor="@color/onSurface" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/mSliderSpace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stepSize="1"
+                        android:value="16"
+                        android:valueFrom="1"
+                        android:valueTo="80" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Star Size"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall.Emphasized"
+                        android:textColor="@color/onSurface" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/mSliderSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stepSize="1"
+                        android:value="36"
+                        android:valueFrom="20"
+                        android:valueTo="50" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
