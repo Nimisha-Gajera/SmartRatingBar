@@ -9,7 +9,7 @@ https://github.com/YourUsername/SmartRatingBar
 
 ## 🎬 Demo
 ![Demo](demo.gif)
-*(or you can link your demo video here)*
+![Image](https://github.com/user-attachments/assets/a688e729-8ccb-42b5-9a0b-4919a4c5c207)
 
 ---
 
