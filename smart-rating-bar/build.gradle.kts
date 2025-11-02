@@ -39,7 +39,7 @@ android {
 publishing {
     publications {
         register<MavenPublication>("release") {
-            groupId = "com.github.Nimisha-Gajera"
+            groupId = "com.github.NGDevStudio"
             artifactId = "smart-rating-bar"
             version = "1.1.0"
 
