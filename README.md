@@ -3,7 +3,7 @@
 A beautiful, customizable, and animated rating bar built in Kotlin.  
 Designed to bring smooth animations, fun interactions, and a clean look to your Android apps!
 
-https://github.com/Nimisha-Gajera/SmartRatingBar
+https://github.com/NGDevStudio/SmartRatingBar
 
 ---
 
@@ -36,7 +36,7 @@ In your **app-level `build.gradle.kts`**, add the library dependency:
 
 ```gradle
  dependencies {
-   implementation("com.github.Nimisha-Gajera:SmartRatingBar:Tag")
+   implementation("com.github.NGDevStudio:SmartRatingBar:Tag")
    }
 ```
 

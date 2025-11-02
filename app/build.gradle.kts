@@ -49,5 +49,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("com.github.NGDevStudio:SmartRatingBar:v1.1.0")
+    implementation("com.github.NGDevStudio:SmartRatingBar:1.1.0")
 }
