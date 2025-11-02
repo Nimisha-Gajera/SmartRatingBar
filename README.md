@@ -17,23 +17,28 @@ https://github.com/Nimisha-Gajera/SmartRatingBar
 ## ⚙️ Setup (Add SmartRatingBar to your project)
 
 ### 1. Add the JitPack repository
-In your **project-level `settings.gradle.kts`**, add the JitPack repository at the end of `repositories`:
+
+In your **project-level `settings.gradle.kts`**, add the JitPack repository at the end of
+`repositories`:
+
    ```gradle
    allprojects {
        repositories {
            ...
-           maven { url 'https://jitpack.io' }
+           maven { setUrl("https://jitpack.io") }
        }
    }
    ```
-### 2. Add the dependency
-In your **app-level build.gradle.kts**, add the library dependency:
 
-    ```gradle
-   dependencies {
+### 2. Add the dependency
+
+In your **app-level `build.gradle.kts`**, add the library dependency:
+
+```gradle
+ dependencies {
    implementation("com.github.Nimisha-Gajera:SmartRatingBar:Tag")
    }
-    ```
+```
 
 ---
 
