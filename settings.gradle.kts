@@ -9,6 +9,7 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven { setUrl("https://jitpack.io") }
     }
 }
 dependencyResolutionManagement {
@@ -22,4 +23,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "SmartRatingBar"
 include(":app")
-include(":smart-rating-bar")
+//include(":smart-rating-bar")

@@ -40,7 +40,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":smart-rating-bar"))
+//    implementation(project(":smart-rating-bar"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
@@ -49,5 +49,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-//    implementation("com.github.Nimisha-Gajera:smart-rating-bar:1.1.0")
+    implementation("com.github.Nimisha-Gajera:SmartRatingBar:v1.1.0")
 }
