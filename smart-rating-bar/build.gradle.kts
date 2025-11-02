@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.library)
     alias(libs.plugins.kotlin.android)
+    `maven-publish`
 }
 
 android {
@@ -35,8 +36,21 @@ android {
     }
 }
 
-dependencies {
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.github.Nimisha-Gajera"
+            artifactId = "smart-rating-bar"
+            version = "1.1.0"
 
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+}
+
+dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
